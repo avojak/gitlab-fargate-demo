@@ -1,0 +1,26 @@
+concurrent = 1
+check_interval = 0
+shutdown_interval = 0
+
+[session_server]
+  session_timeout = 1800
+
+[[runners]]
+  name = "{{ runner_name }}"
+  url = "{{ gitlab_external_url }}"
+  id = {{ runner_id }}
+  token = "{{ runner_auth_token }}"
+  token_obtained_at = 0001-01-01T00:00:00Z
+  token_expires_at = 0001-01-01T00:00:00Z
+  executor = "custom"
+  builds_dir = "{{ runner_install_dir }}/builds"
+  cache_dir = "{{ runner_install_dir }}/cache"
+  [runners.custom]
+    config_exec = "{{ runner_install_dir }}/fargate/fargate"
+    config_args = ["--config", "{{ runner_install_dir }}/fargate/config.toml", "custom", "config"]
+    prepare_exec = "{{ runner_install_dir }}/fargate/fargate"
+    prepare_args = ["--config", "{{ runner_install_dir }}/fargate/config.toml", "custom", "prepare"]
+    run_exec = "{{ runner_install_dir }}/fargate/fargate"
+    run_args = ["--config", "{{ runner_install_dir }}/fargate/config.toml", "custom", "run"]
+    cleanup_exec = "{{ runner_install_dir }}/fargate/fargate"
+    cleanup_args = ["--config", "{{ runner_install_dir }}/fargate/config.toml", "custom", "cleanup"]

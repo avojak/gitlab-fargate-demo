@@ -1,0 +1,12 @@
+.aws/
+
+.terraform/
+*.lock.hcl
+*.tfplan
+*.tfstate
+*.tfstate*
+
+id_rsa
+id_rsa.pub
+
+.vault-password-file

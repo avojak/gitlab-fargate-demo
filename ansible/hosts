@@ -1,0 +1,12 @@
+all:
+  hosts:
+    gitlab:
+      ansible_host: ec2-34-193-239-141.compute-1.amazonaws.com
+      ansible_user: ec2-user
+      ansible_ssh_private_key_file: ../id_rsa
+      ansible_ssh_extra_args: -o StrictHostKeyChecking=no
+    runner:
+      ansible_host: ec2-54-147-79-209.compute-1.amazonaws.com
+      ansible_user: ec2-user
+      ansible_ssh_private_key_file: ../id_rsa
+      ansible_ssh_extra_args: -o StrictHostKeyChecking=no
