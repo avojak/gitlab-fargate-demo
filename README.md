@@ -74,6 +74,13 @@ Finally, install the runner:
 make install-runner
 ```
 
+## TODO
+
+[ ] Non-root container user
+[ ] Additional logging in AWS console
+[ ] Test specifying different container image in .gitlab-ci.yml
+[ ] Look into tuning concurrency vs. number of runners
+
 ## References
 
 - [Autoscaling GitLab CI on AWS Fargate](https://docs.gitlab.com/runner/configuration/runner_autoscale_aws_fargate/#step-1-prepare-a-container-image-for-the-aws-fargate-task)
