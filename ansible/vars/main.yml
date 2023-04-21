@@ -11,3 +11,4 @@ runner_registration_token: !vault |
           66653039653065636364666234303766376231353032326466383431363561646630
 runner_subnet_id: subnet-0eb903c016b7ba91d
 runner_security_group_id: sg-0e26d1b3a10a67856
+ecs_task_revision: 1

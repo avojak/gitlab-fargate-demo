@@ -31,6 +31,7 @@ make apply
 Make note of the output values for use in the Ansible. For example:
 
 ```
+ecs_task_revision = 3
 gitlab_public_dns = "ec2-XXX-XXX-XXX-XXX.compute-1.amazonaws.com"
 runner_public_dns = "ec2-XXX-XXX-XXX-XXX.compute-1.amazonaws.com"
 runner_security_group = "sg-XXXX"
@@ -43,6 +44,7 @@ Using the Terraform output:
 
 1. Update the hostnames in `hosts` with the DNS names for GitLab and the Runner
 2. Update the runner security group and subnet IDs in `vars/main.yml`
+3. Update the ECS task revision in `vars/main.yml`
 
 ### GitLab Server
 

@@ -17,3 +17,8 @@ output "runner_security_group" {
   description = "The ID of the runner security group"
   value       = resource.aws_security_group.runner.id
 }
+
+output "ecs_task_revision" {
+  description = "The revision of the ECS task definition"
+  value       = resource.aws_ecs_task_definition.test-task.revision
+}

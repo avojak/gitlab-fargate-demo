@@ -6,7 +6,7 @@ LogFormat = "text"
   Region = "{{ aws_region }}"
   Subnet = "{{ runner_subnet_id }}"
   SecurityGroup = "{{ runner_security_group_id }}"
-  TaskDefinition = "{{ ecs_task_name }}:1"
+  TaskDefinition = "{{ ecs_task_name }}:{{ ecs_task_revision }}"
   EnablePublicIP = true
 
 [TaskMetadata]
