@@ -2,6 +2,8 @@
 
 Demonstration of setting up autoscaled GitLab runners using AWS Fargate.
 
+Emphasis on this being a **demo** - if you plan to deploy this in a production setting, there are *many* things that should be changed to improve the security posture.
+
 ## Prerequisites
 
 1. Generate SSH key (`./id_rsa`, and `./id_rsa.pub`)

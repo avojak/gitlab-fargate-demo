@@ -5,6 +5,13 @@
     - vars/main.yml
   roles:
     - { role: geerlingguy.gitlab }
+  post_tasks:
+    - name: Fetch initial root password
+      command: cat /etc/gitlab/initial_root_password
+      register: command_output
+    - name: Print to console
+      debug:
+        msg: "{{ command_output.stdout_lines }}"
 
 - hosts: runner
   become: true
