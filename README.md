@@ -1,4 +1,8 @@
-# GitLab
+# GitLab Fargate Runners Demo
+
+Demonstration of setting up autoscaled GitLab runners using AWS Fargate.
+
+## Prerequisites
 
 1. Generate SSH key (`./id_rsa`, and `./id_rsa.pub`)
 2. Set Ansible vault password (`./ansible/.vault-password-file`)
