@@ -67,6 +67,7 @@
     dest: "{{ runner_install_dir }}/fargate/fargate"
     mode: '0755'
 
+# Forces an initial connection from the runner to the server
 - name: Verify that the runner can connect to the server
   command: "gitlab-runner verify"
   when: not runner_file.stat.exists

@@ -3,6 +3,16 @@
 1. Generate SSH key (`./id_rsa`, and `./id_rsa.pub`)
 2. Set Ansible vault password (`./ansible/.vault-password-file`)
 
+## Docker
+
+Builds the Fargate driver image.
+
+```bash
+cd docker
+make image
+make push
+```
+
 ## Terraform
 
 ```bash
@@ -54,3 +64,13 @@ Finally, install the runner:
 ```bash
 make install-runner
 ```
+
+## References
+
+- [Autoscaling GitLab CI on AWS Fargate](https://docs.gitlab.com/runner/configuration/runner_autoscale_aws_fargate/#step-1-prepare-a-container-image-for-the-aws-fargate-task)
+- [Fargate Driver Debian](https://gitlab.com/tmaczukin-test-projects/fargate-driver-debian/-/blob/master/Dockerfile)
+- [AWS Fargate driver for Custom Executor](https://gitlab.com/gitlab-org/ci-cd/custom-executor-drivers/fargate/-/tree/v0.2.0/docs?ref_type=tags#configuration)
+- [Attach IAM role to Amazon EC2 instance using Terraform](https://skundunotes.com/2021/11/16/attach-iam-role-to-aws-ec2-instance-using-terraform/)
+- [ECS ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+- [ECS ContainerDefinition private registry auth](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/private-auth.html)
+- [Registering a GitLab Runner using a pre-made config.toml](https://stackoverflow.com/a/54665350/3300205) (Re: [gitlab-runner #3553](https://gitlab.com/gitlab-org/gitlab-runner/-/issues/3553#note_108527430))
