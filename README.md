@@ -2,6 +2,7 @@
 
 1. Generate SSH key (`./id_rsa`, and `./id_rsa.pub`)
 2. Set Ansible vault password (`./ansible/.vault-password-file`)
+3. Add AWS access key ID and secret key to `./terraform/.aws/credentials`
 
 ## Docker
 
