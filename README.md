@@ -80,6 +80,7 @@ make install-runner
 [ ] Additional logging in AWS console
 [ ] Test specifying different container image in .gitlab-ci.yml
 [ ] Look into tuning concurrency vs. number of runners
+[ ] Look into tagging of tasks
 
 ## References
 
