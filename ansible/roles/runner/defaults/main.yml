@@ -3,3 +3,4 @@ aws_region: us-east-1
 fargate_cluster_name: gitlab-cluster
 ecs_task_name: test-task
 runner_name: fargate-test-runner
+concurrency_count: 2
